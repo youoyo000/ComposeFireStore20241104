@@ -51,6 +51,7 @@ fun Birth(m: Modifier){
     var userName by remember { mutableStateOf("李宥萱")}
     var userWeight by remember { mutableStateOf(3500)}
     var userPassword by remember { mutableStateOf("")}
+    var msg by remember { mutableStateOf("訊息")}
     Column {
         TextField(
             value = userName,
@@ -88,6 +89,19 @@ fun Birth(m: Modifier){
 
 
         Text("您輸入的姓名是：$userName\n出生體重為：$userWeight 公克"+ "\n密碼：$userPassword")
+
+        Row {
+            Button(onClick = {  }) {
+                Text("新增/修改資料")
+            }
+            Button(onClick = {  }) {
+                Text("查詢資料")
+            }
+            Button(onClick = {  }) {
+                Text("刪除資料")
+            }
+        }
+        Text(text = msg)
 
     }
 
