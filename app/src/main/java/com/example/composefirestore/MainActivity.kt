@@ -135,7 +135,13 @@ fun Birth(m: Modifier){
             }) {
                 Text("查詢資料")
             }
-            Button(onClick = {  }) {
+            Button(onClick = {
+                db.collection("users")
+                    .document(userName)
+                    .delete()
+                msg = "刪除資料"
+
+            }) {
                 Text("刪除資料")
             }
         }
